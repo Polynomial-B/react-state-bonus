@@ -9,18 +9,15 @@ const [lock4, setLock4] = React.useState(0)
 
 
 function handleLock(event, lock, setLock) {
-    if(event.target.className === "add") {
-        if(lock < 9) {
+    if(event.target.className === "add" && lock < 9) {
         let updateLock = lock + 1
         setLock(updateLock)
-        } else return
-    } else if (event.target.className === "remove") {
-        if(lock > 0) {
-            let updateLock = lock - 1
-            setLock(updateLock)
-            } else return
-    }
+    } else if (event.target.className === "remove" && lock > 0) {
+        let updateLock = lock - 1
+        setLock(updateLock)
+    } else return
 }
+
 
 
 function LockControl({ lock, setLock }) {
