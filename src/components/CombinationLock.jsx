@@ -23,13 +23,13 @@ function handleLock(event, lock, setLock) {
 }
 
 
-const LockControl = ({ lock, setLock }) => (
-    <div className="container">
+function LockControl({ lock, setLock }) {
+    return <div className="container">
       <h1>{lock}</h1>
       <button className="add" onClick={(event) => handleLock(event, lock, setLock)}>➕</button>
       <button className="remove" onClick={(event) => handleLock(event, lock, setLock)}>➖</button>
     </div>
-  );
+}
 
 function Unlocked( { lock1, lock2, lock3, lock4 }) {
     const key = [1, 2, 3, 4]
